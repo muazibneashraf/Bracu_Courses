@@ -1,0 +1,46 @@
+R1>en
+R1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#ip route 172.31.0.0 255.255.255.0 172.31.1.193
+R1(config)#ip route 172.31.1.128 255.255.255.192 172.31.1.193
+R1(config)#ip route 172.31.1.196 255.255.255.252 172.31.1.193
+
+_______________________________________________________________________
+
+R2>en
+R2#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#ip route 172.31.1.0 255.255.255.128 s0/0/0
+%Default route without gateway, if not a point-to-point interface, may impact performance
+R2(config)#ip route 172.31.1.128 255.255.255.192 s0/0/1
+%Default route without gateway, if not a point-to-point interface, may impact performance
+
+________________________________________________________________________________________
+
+R3>en
+R3#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R3(config)#ip route 0.0.0.0 0.0.0.0 s0/0/1
+%Default route without gateway, if not a point-to-point interface, may impact performance
+
+____________________________________________________________________________________________
+
+R1#show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     172.31.0.0/16 is variably subnetted, 7 subnets, 5 masks
+S       172.31.0.0/24 [1/0] via 172.31.1.193
+C       172.31.1.0/25 is directly connected, GigabitEthernet0/0
+L       172.31.1.1/32 is directly connected, GigabitEthernet0/0
+S       172.31.1.128/26 [1/0] via 172.31.1.193
+C       172.31.1.192/30 is directly connected, Serial0/0/0
+L       172.31.1.194/32 is directly connected, Serial0/0/0
+S       172.31.1.196/30 [1/0] via 172.31.1.193
