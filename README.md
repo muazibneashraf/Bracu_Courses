@@ -4,19 +4,18 @@ Coursework, programming labs, assignments, and Google Colab notebooks organized 
 
 ## Repository structure
 
-Each course has its own folder. The course names follow the official
-[BRAC University CSE course list](https://cse.bracu.ac.bd/course/list):
+Each official course has its own folder. The names and titles follow the
+[BRAC University CSE course list](https://cse.bracu.ac.bd/course/list).
+Folders are created even when no local material was available, so the
+repository has a complete catalog structure:
 
 ```text
-CSE321/
-CSE331/
-CSE340/
-...
-CSE428/
-CSE221/
-CSE330/
-CST309/
-MAT215/
+CSE110/  CSE111/  CSE220/  CSE221/  CSE230/
+CSE250/  CSE251/  CSE260/  CSE320/  CSE321/
+CSE330/  CSE331/  CSE340/  CSE341/  CSE350/
+CSE360/  CSE370/  CSE400/  CSE420/  CSE421/
+CSE422/  CSE423/  CSE460/  CSE461/  CSE470/
+CSE471/  CSE700/  CSE705/ ... / CSE798/
 ```
 
 Notebooks whose filenames did not include a course code were classified from
@@ -24,6 +23,10 @@ their content. Algorithm and data-structure notebooks are in `CSE221`,
 numerical-methods notebooks are in `CSE330`, machine-learning notebooks are in
 `CSE422`, graphics notebooks are in `CSE423`, and robotics notebooks are in
 `CSE461`.
+
+The current catalog does not list the local `CSE428`, `CST309`, or `MAT215`
+codes. Their files are preserved under `Other-Courses/` rather than being
+presented as current official CSE courses.
 
 ## Working with the notebooks
 
