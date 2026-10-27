@@ -1,0 +1,13 @@
+# Core ML stack
+torch
+torchvision
+
+# Utilities
+numpy
+pillow
+matplotlib
+tqdm
+scikit-learn
+
+# Notebook kernel (for VS Code/Jupyter)
+ipykernel
