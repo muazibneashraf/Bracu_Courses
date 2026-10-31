@@ -2,6 +2,9 @@
 
 Coursework, programming labs, assignments, and Google Colab notebooks organized by course.
 
+See [PROJECTS.md](PROJECTS.md) for the project index and recovered submissions.
+See [ATTRIBUTION_REVIEW.md](ATTRIBUTION_REVIEW.md) for peer/reference items awaiting review.
+
 ## Repository structure
 
 Each folder corresponds to a course represented in the local collection. The
